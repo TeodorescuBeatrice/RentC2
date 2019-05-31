@@ -1,0 +1,136 @@
+﻿@model RentC.Model.Reservation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <h3> Car </h3>
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.Plate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Car.Plate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.Manufacturer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Car.Manufacturer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.Model)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Car.Model)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Car.PricePerDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Car.PricePerDay)
+        </dd>
+        <hr />
+        <h3>Customer</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Location)
+        </dd>
+
+
+        <hr />
+        <h3>Reservation Status</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservStats.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservStats.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservStats.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReservStats.Description)
+        </dd>
+        <hr />
+        <h3>Reservation</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <hr />
+        <h3>Coupon</h3>
+        <dt>
+            @Html.DisplayNameFor(model => model.Coupon.CouponCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coupon.CouponCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Coupon.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coupon.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Coupon.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coupon.Discount)
+        </dd>
+
+    </dl>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { CarId = @Model.CarID, CustomerId = @Model.CostumerID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</div>
